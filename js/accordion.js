@@ -20,12 +20,15 @@ const btns = document.querySelectorAll('.feature__link');
 
 // });
 
-btns.forEach((btnItem, index) => {
-    btnItem.addEventListener('click', () => {
-        btns.forEach((btn, ind) => {
+btns.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        btns.forEach((btnItem, idx) => {
             if (btnItem === btn) {
                 btnItem.classList.toggle('feature__link_active');
-                lists[ind].classList.toggle('hidden');
+                lists[idx].classList.toggle('hidden');
+            } else  {
+                btnItem.classList.remove('feature__link_active');
+                lists[idx].classList.add('hidden');
             }
         });
     });
