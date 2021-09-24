@@ -11,4 +11,4 @@ modal.addEventListener('click', (event) => {
     if (target.classList.contains('overlay') || target.classList.contains('modal__close')) {
         modal.classList.add('hidden');
     }
-})
+});
